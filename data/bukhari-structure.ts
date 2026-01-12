@@ -363,7 +363,7 @@ export const bukhariBooks = [
     chapters: [
       { id: 'ch1', name: 'İçecek Adabı', nameAr: 'باب آداب الشرب', hadiths: [] }
     ]
-  }
+  },
 
   {
     id: 'marda',
