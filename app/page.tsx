@@ -196,25 +196,35 @@ export default function HadisKutuphanesi() {
                 </h3>
                 
                 <div className="chapters-grid">
-                  {book.chapters.map((chapter: any) => (
-                    <button
-                      key={chapter.id}
-                      onClick={() => {
-                        setSelectedBook(book);
-                        setSelectedChapter(chapter);
-                      }}
-                      className="chapter-card"
-                    >
-                      <div className="chapter-content">
-                        <h4 className="chapter-name">{chapter.name}</h4>
-                        <p className="chapter-name-ar" dir="rtl">{chapter.nameAr}</p>
-                        <span className="chapter-count">
-                          {chapter.hadiths.length} hadis
-                        </span>
-                      </div>
-                      <div className="chapter-arrow">→</div>
-                    </button>
-                  ))}
+                  {book.chapters.map((chapter: any) => {
+                    const firstHadith = chapter.hadiths[0]?.id || 0;
+                    const lastHadith = chapter.hadiths[chapter.hadiths.length - 1]?.id || 0;
+                    
+                    return (
+                      <button
+                        key={chapter.id}
+                        onClick={() => {
+                          setSelectedBook(book);
+                          setSelectedChapter(chapter);
+                        }}
+                        className="chapter-card"
+                      >
+                        <div className="chapter-content">
+                          <h4 className="chapter-name">{chapter.name}</h4>
+                          <p className="chapter-name-ar" dir="rtl">{chapter.nameAr}</p>
+                          <div className="chapter-info">
+                            <span className="chapter-count">
+                              {chapter.hadiths.length} hadis
+                            </span>
+                            <span className="chapter-range">
+                              #{firstHadith} - #{lastHadith}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="chapter-arrow">→</div>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             ))}

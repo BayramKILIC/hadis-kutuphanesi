@@ -567,3 +567,20 @@ body {
   }
 }
 
+/* Info du chapitre avec plage de numéros */
+.chapter-info {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.chapter-range {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
