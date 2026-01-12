@@ -1,0 +1,388 @@
+/* page.css - Styles personnalisés pour Hadis Kütüphanesi */
+
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.home-header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #065f46;
+  margin-bottom: 1rem;
+}
+
+.home-header p {
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.collection-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  border-color: #10b981;
+}
+
+.collection-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.collection-card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.collection-name-ar {
+  font-size: 1.25rem;
+  color: #6b7280;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.collection-count {
+  font-size: 0.875rem;
+  color: #059669;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.page-header {
+  background: linear-gradient(90deg, #059669 0%, #14b8a6 100%);
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.breadcrumb button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: white;
+}
+
+.search-container {
+  margin-top: 1.5rem;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.content-wrapper h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.book-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border-color: #10b981;
+}
+
+.book-icon {
+  font-size: 2rem;
+  color: #059669;
+  margin-bottom: 0.75rem;
+}
+
+.book-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.book-name-ar {
+  font-size: 1.125rem;
+  color: #6b7280;
+  text-align: right;
+  margin-bottom: 0.75rem;
+}
+
+.book-count {
+  font-size: 0.875rem;
+  color: #059669;
+  font-weight: 500;
+}
+
+.results-count {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.hadiths-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hadith-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #10b981;
+  transition: box-shadow 0.3s;
+}
+
+.hadith-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hadith-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.hadith-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge.reference {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.grade {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+}
+
+.narrator {
+  color: #374151;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.narrator-label {
+  font-weight: 600;
+}
+
+.hadith-text-ar {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hadith-text-ar p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: right;
+  direction: rtl;
+  color: #1f2937;
+}
+
+.hadith-text-tr {
+  background: #dbeafe;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.hadith-text-tr p {
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.hadith-link {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.hadith-link a {
+  color: #059669;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hadith-link a:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.no-results p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.clear-search-button {
+  background: #059669;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.clear-search-button:hover {
+  background: #047857;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.875rem;
+  }
+
+  .collections-grid,
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}

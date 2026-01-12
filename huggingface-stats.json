@@ -1,0 +1,23 @@
+{
+  "source": "HuggingFace",
+  "url": "https://huggingface.co/datasets/meeAtif/hadith_datasets/resolve/main/Sahih%20al-Bukhari.json",
+  "totalHadiths": 7277,
+  "minId": null,
+  "maxId": null,
+  "missingIds": 0,
+  "structure": "Array direct",
+  "fields": [
+    "Book",
+    "Chapter_Number",
+    "Chapter_Title_Arabic",
+    "Chapter_Title_English",
+    "Arabic_Text",
+    "English_Text",
+    "Grade",
+    "Reference",
+    "In-book reference"
+  ],
+  "hasArabic": false,
+  "hasEnglish": false,
+  "hasTurkish": false
+}
