@@ -221,6 +221,13 @@
   font-weight: 500;
 }
 
+.book-range {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
 .results-count {
   color: #6b7280;
   margin-bottom: 1.5rem;

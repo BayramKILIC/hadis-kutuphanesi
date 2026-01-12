@@ -102,7 +102,12 @@ export default function HadisKutuphanesi() {
           
           <div className="books-grid">
             {collection?.books.map(book => {
-              const totalHadiths = book.chapters.reduce((sum, ch) => sum + ch.hadiths.length, 0);
+              const allHadiths = book.chapters.flatMap(ch => ch.hadiths);
+              const totalHadiths = allHadiths.length;
+              
+              // Trouver le premier et dernier numéro
+              const firstId = allHadiths.length > 0 ? allHadiths[0].id : 0;
+              const lastId = allHadiths.length > 0 ? allHadiths[allHadiths.length - 1].id : 0;
               
               return (
                 <button
@@ -114,6 +119,7 @@ export default function HadisKutuphanesi() {
                   <h3>{book.name}</h3>
                   <p className="book-name-ar">{book.nameAr}</p>
                   <p className="book-count">{totalHadiths} hadis</p>
+                  <p className="book-range">#{firstId} → #{lastId}</p>
                 </button>
               );
             })}
